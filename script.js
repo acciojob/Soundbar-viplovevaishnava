@@ -7,7 +7,7 @@ buttons.forEach((button) => {
             currentAudio.pause();
             currentAudio.currentTime = 0;
         }
-        currentAudio = new Audio(`assets/${e.target.textContent.trim()}.mp3`)
+        currentAudio = new Audio(`sounds/${e.target.textContent.trim()}.mp3`)
         currentAudio.play()
     })
 })
