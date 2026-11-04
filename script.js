@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const buttons = document.querySelectorAll('.btn')
 let currentAudio = null
 buttons.forEach((button) => {
@@ -11,4 +10,10 @@ buttons.forEach((button) => {
         currentAudio = new Audio(`assets/${e.target.textContent.trim()}.mp3`)
         currentAudio.play()
     })
+})
+const stop = document.querySelector('.stop')
+stop.addEventListener('click', () => {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+
 })
